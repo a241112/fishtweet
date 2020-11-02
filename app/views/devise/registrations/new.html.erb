@@ -1,3 +1,5 @@
+<%= render "shared/second-header"%>
+
 <div class="contents-row">
   <div class="container">
     <h2 class="form-header">
@@ -38,9 +40,11 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "新規登録" %>
+        <%= f.submit "新規登録" , class:"login-btn" %>
       </div>
 
     <% end %>
   </div>
 </div>
+
+<%= render "shared/second-footer"%>
