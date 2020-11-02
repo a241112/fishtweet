@@ -1,0 +1,46 @@
+.second-footer {
+  width: 100vw;
+  padding: 5vh 0;
+  color: black;
+  background-color: powderblue;
+  text-align: center;
+}
+
+.second-footer-contents {
+  margin-bottom: 5vh;
+}
+
+.fishtweet-second-details {
+  margin: 0 4vw;
+  display: flex;
+  justify-content: start;
+  margin-left: 10vw;
+}
+
+.second-footer-content-head {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-right: 2vw;
+}
+
+.second-footer-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-footer-link {
+  color: black;
+  font-size: 12px;
+  line-height: 30px;
+  margin-right: 1.5vw;
+}
+
+.fishtweet-second-footer-icon {
+  width: 30vh;
+  vertical-align: bottom;
+}
+
+.second-footer>p {
+  font-size: 14px;
+}
