@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_31_051821) do
+ActiveRecord::Schema.define(version: 2020_11_03_175026) do
+
+  create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "type", null: false
+    t.time "date", null: false
+    t.integer "quantity_id", null: false
+    t.integer "size_id", null: false
+    t.integer "weather_id", null: false
+    t.integer "wind_id"
+    t.string "feed", null: false
+    t.string "address", null: false
+    t.text "description"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
