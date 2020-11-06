@@ -1,7 +1,7 @@
 class CreateTweets < ActiveRecord::Migration[6.0]
   def change
     create_table :tweets do |t|
-      t.string :type , null: false
+      t.string :type_name , null: false
       t.time :date , null: false
       t.integer :quantity_id , null: false
       t.integer :size_id , null: false
