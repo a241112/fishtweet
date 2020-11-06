@@ -57,3 +57,10 @@
   color: blue;
   font-weight: bold;
 }
+
+.new-tweet{
+  text-decoration: none;
+  margin-right: 3vw;
+  color: blue;
+  font-weight: bold;
+}
