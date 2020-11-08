@@ -1,0 +1,16 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       
+     tweet:
+       image: 画像
+       type_name: 魚種
+       date: 日時
+       quantity_id: 数量
+       size_id: サイズ
+       weather_id: 天気
+       wind_id: 風速
+       feed: エサ
+       address: 釣れた場所
+       description: コメント
