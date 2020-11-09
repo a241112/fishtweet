@@ -2,7 +2,8 @@ ja:
  activerecord:
    attributes:
      user:
-       
+       name: ニックネーム
+       prefecture_id: 活動エリア
      tweet:
        image: 画像
        type_name: 魚種
