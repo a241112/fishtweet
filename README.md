@@ -41,7 +41,7 @@ Things you may want to cover:
 
 | Column         | Type       | Options                        |
 | -------------- | ------     | ------------------------------ |
-| description    | string     |                                |
+| description    | text       |                                |
 | type           | string     | null: false                    |
 | date           | time       | null: false                    |
 | quantity_id    | integer    | null: false                    |
