@@ -7,7 +7,7 @@ RSpec.describe Tweet, type: :model do
 
   describe '投稿機能' do
     context '投稿できるとき' do
-      it 'image、type_name、quantity_id、size_id、weather_id、wind_id、feed、addressが存在すれば投稿できる' do
+      it 'image、type_name、datetime、quantity_id、size_id、weather_id、wind_id、feed、addressが存在すれば投稿できる' do
         expect(@tweet).to be_valid
       end
     end
@@ -23,8 +23,8 @@ RSpec.describe Tweet, type: :model do
         @tweet.valid?
         expect(@tweet.errors.full_messages).to include("魚種を入力してください")
       end
-      it 'dateが空では投稿できない' do
-        @tweet.date = ''
+      it 'datetimeが空では投稿できない' do
+        @tweet.datetime = ''
         @tweet.valid?
         expect(@tweet.errors.full_messages).to include("日時を入力してください")
       end
