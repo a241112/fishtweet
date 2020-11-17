@@ -8,7 +8,10 @@ class Tweet < ApplicationRecord
   has_many_attached :image
   belongs_to :user
 
-  validates :image, :type_name, :date, :wind, :feed, :address, presence: true
+  geocoded_by :address
+  before_validation :geocode
+
+  validates :image, :type_name, :date, :wind, :feed, :address, :latitude, :longitude, presence: true
   validates :type_name, format: { with: /\A[ァ-ン]+\z/, message: "は全角カタカナで入力してください" }
   validates :feed, format: { with: /\A[ぁ-んァ-ン一-龥]+\z/,  message: "は全角文字で入力してください" }
   with_options numericality: { other_than: 0 , message: "を選択してください" } do
