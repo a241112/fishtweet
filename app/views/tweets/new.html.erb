@@ -26,13 +26,13 @@
 
       <div class="form-group">
         <div class="form-text">
-          <%= f.label :date, "日時" %>
+          <%= f.label :datetime, "日時" %>
           <span class="indispensable">必須</span>
         </div>
         <div class='input-date-wrap'>
           <%= raw sprintf(
             f.datetime_select(
-              :date,
+              :datetime,
               {
                 use_month_numbers: true ,
                 default:Time.now,
