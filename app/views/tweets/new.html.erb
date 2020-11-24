@@ -103,6 +103,7 @@
       <script>
         let map
         let geocoder
+        let marker
 
         function initMap() {
           geocoder = new google.maps.Geocoder()
@@ -125,12 +126,17 @@
             if (status == 'OK') {
               map.setCenter(results[0].geometry.location);
 
-              var marker = new google.maps.Marker({
+              if(marker != null){
+              marker.setMap(null);
+              }
+              marker = null;
+
+              marker = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location
               });
 
-              // タイトルフォームにデフォルト値として検索値を設定
+              // addressフォームにデフォルト値として検索値を設定
               let address = document.getElementById('tweet_address');
               address.setAttribute("value", inputAddress);
 
