@@ -9,8 +9,8 @@ class CreateTweets < ActiveRecord::Migration[6.0]
       t.integer :wind_id 
       t.string :feed , null: false
       t.string :address , null: false
-      t.float :latitude , null: false
-      t.float :longitude , null: false
+      t.float :latitude , null: false , limit: 53
+      t.float :longitude , null: false, limit: 53
       t.text :description 
       t.integer :user_id , null: false , foreign_key: true
       t.timestamps
