@@ -18,6 +18,5 @@ class Tweet < ApplicationRecord
     validates :quantity_id
     validates :size_id
     validates :weather_id
-    validates :wind_id
   end
 end

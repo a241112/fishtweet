@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2020_11_06_082653) do
     t.integer "wind_id"
     t.string "feed", null: false
     t.string "address", null: false
-    t.float "latitude", null: false
-    t.float "longitude", null: false
+    t.float "latitude", limit: 53, null: false
+    t.float "longitude", limit: 53, null: false
     t.text "description"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
