@@ -1,0 +1,138 @@
+<%= render "shared/second-header" %>
+
+<div class="fish-show">
+  <div class="fish-img-box">
+    <h2 class="name">
+      <%= @tweet.type_name %>
+    </h2>
+    <div class='fish-img-content'>
+      <%= image_tag @tweet.image ,class:"fish-show-img" %>
+    </div>
+    
+
+
+    <div class="fish-explain-box">
+      <span><%= "釣果のデータ" %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-fish">魚種</th>
+          <td class="detail-value"><%= @tweet.type_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-fish">日時</th>
+          <td class="detail-value"><%= l @tweet.datetime %></td>
+        </tr>
+        <tr>
+          <th class="detail-fish">数量</th>
+          <td class="detail-value"><%= @tweet.quantity.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-fish">サイズ</th>
+          <td class="detail-value"><%= @tweet.size.name %>cm</td>
+        </tr>
+        <tr>
+          <th class="detail-fish">天気</th>
+          <td class="detail-value"><%= @tweet.weather.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-fish">風速</th>
+          <td class="detail-value"><%= @tweet.wind.name %> m/s</td>
+        </tr>
+        <tr>
+          <th class="detail-fish">エサ</th>
+          <td class="detail-value"><%= @tweet.feed %></td>
+        </tr>
+        <tr>
+          <th class="detail-fish">釣れた場所</th>
+          <td class="detail-value"><%= @tweet.address %></td>
+        </tr>
+        <tr>
+          <th class="detail-fish">コメント</th>
+          <% if @tweet.description.length > 0  %>
+            <td class="detail-value"><%= @tweet.description %></td>
+          <% else %>
+            <td class="detail-value"><%= "コメントがありません" %></td>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="map-box">
+      <h2 class="name">釣れた場所</h2>
+      <div id='map'>
+      </div>
+
+      <script>
+        function initMap() {
+      // latitude,longitudeから位置を特定
+          var test = {lat: <%= @tweet.latitude %>, lng: <%= @tweet.longitude %>};
+          var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15, 
+                    center: test
+                    });
+          var transitLayer = new google.maps.TransitLayer();
+          transitLayer.setMap(map);
+
+          var contentString = '釣れた場所：<%= @tweet.address %>';
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+
+      // Map上の指定した位置にピンを挿して表示する
+          var marker = new google.maps.Marker({
+            position:test,
+                        map: map,
+                        title: contentString
+                      });
+
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJYMywyohq0hX3wwCayFEE_azosNW6Oeg&callback=initMap" async defer></script>
+    </div>
+
+    <div class="option">
+      <div class="favorite-btn">
+        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+        <span>お気に入り 0</span>
+      </div>
+    </div>
+
+    <div class="edit-destroy-btn">
+      <% if user_signed_in? && current_user == @tweet.user %>
+        <%= link_to '編集', edit_tweet_path, method: :get, class: "fish-red-btn" %>
+        <%= link_to '削除', tweet_path, method: :delete, class:'fish-destroy' %>
+      <% end %>
+    </div>
+  </div>
+  <%# /商品の概要 %>
+
+
+  <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+      <p class="comment-warn">
+        相手のことを考え丁寧なコメントを心がけましょう。
+        <br>
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      </p>
+      <button type="submit" class="comment-btn">
+        <span>コメントする<span>
+      </button>
+    </form>
+  </div>
+  <div class="links">
+    <a href="#" class="change-item-btn">
+      ＜ 前の釣果
+    </a>
+    <a href="#" class="change-item-btn">
+      後ろの釣果 ＞
+    </a>
+  </div>
+</div>
+
+<%= render "shared/second-footer" %>

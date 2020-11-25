@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.fishtweet-icon {
+  width: 15vw;
+  margin-right: 10vw;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+
+.user-name {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: blue;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 2vw;
+  color: blue;
+  font-weight: bold;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.new-tweet{
+  text-decoration: none;
+  margin-right: 3vw;
+  color: blue;
+  font-weight: bold;
+}

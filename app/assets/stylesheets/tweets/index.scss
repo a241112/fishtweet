@@ -1,0 +1,223 @@
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #f8f8f8;
+}
+
+/* 画面上部の「釣果情報アプリ」帯部分 */
+.title-contents {
+  width: 100vw;
+  background-image: image-url('header.png');
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-title {
+  font-size: 8vh;
+}
+
+.service-explain {
+  font-size: 2.5vh;
+  line-height: 40px;
+  margin-bottom: 2.5vh;
+}
+
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: lightskyblue;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.store-btn {
+  display: flex;
+  margin-top: 24px;
+}
+
+.apple-btn {
+  margin-right: 1vw;
+  height: 9vh;
+}
+
+.google-btn {
+  height: 9vh;
+}
+
+/* //画面上部の「釣果情報アプリ」帯部分 */
+
+/* Fishtweetが選ばれる3つの理由部分 */
+.select-reason-contents {
+  padding: 5vh 15vw;
+}
+
+.select-reason-contents>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+
+.select-reason-contents>.title::after {
+  content: '';
+  width: 250px;
+  height: 4px;
+  background-color: blue;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reason-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.reason-lists>.list {
+  width: 36vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.list-pict {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.reason-list-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.reason-list-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* //Fishtweetが選ばれる3つの理由部分 */
+
+
+/* 釣果一覧 */
+
+.fish-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.fish-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.fish-contents>.title::after {
+  content: '';
+  width: 180px;
+  height: 4px;
+  background-color: blue;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fish-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fish-lists>.list {
+  width: 40vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+
+.fish-img-content {
+  position: relative;
+}
+
+.fish-img {
+  width: 35vh;
+  height: 35vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.fish-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.fish-name {
+  font-size: 2.5vh;
+}
+
+.fish-size {
+  font-size: 2.5vh;
+}
+
+.fish-address {
+  font-size: 2.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}
+
+/* //釣果一覧 */
