@@ -132,6 +132,9 @@
         <div class="message-date">
           <%= l message.created_at %>
         </div>
+        <% if user_signed_in? && current_user == message.user %>
+          <%= link_to '削除', tweet_message_path(@tweet, message), method: :delete, class:'message-destroy' %>
+        <% end %>
       </div>
       <div class="lower-message">
         <div class="message-text">
