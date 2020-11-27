@@ -19,6 +19,8 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @messages = @tweet.messages
+    @message = Message.new
   end
 
   def edit
