@@ -7,6 +7,7 @@ class Tweet < ApplicationRecord
   
   has_one_attached :image
   belongs_to :user
+  has_many :messages
 
   geocoded_by :address
   before_validation :geocode
