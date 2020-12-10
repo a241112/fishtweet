@@ -8,6 +8,8 @@ class Tweet < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   has_many :messages
+  has_many :likes, dependent: :destroy
+  has_many :liked_users, through: :likes, source: :user
 
   geocoded_by :address
   before_validation :geocode
