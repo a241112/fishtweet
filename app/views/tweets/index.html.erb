@@ -84,17 +84,8 @@
           </div>
           <div class='fish-address'>
             <%= tweet.address %>
-            <div class='star-btn'>
-              <% if current_user.already_liked?(tweet) %>
-                <%= link_to tweet_likes_path(tweet), method: :delete do%>
-                  <%= image_tag "unlike.png", class:"star-icon" %>
-                <% end %>
-              <% else %>
-                <%= link_to tweet_likes_path(tweet), method: :post do%>
-                  <%= image_tag "like.png", class:"star-icon" %>
-                <% end %>
-              <% end %>
-              <span class='star-count'><%= tweet.likes.count %></span>
+            <div class='star-btn' id='like_<%= tweet.id %>'>
+              <%= render partial: 'shared/like', locals: { tweet: tweet } %>
             </div>
           </div>
         </div>

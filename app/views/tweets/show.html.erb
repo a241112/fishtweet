@@ -97,16 +97,10 @@
 
     <div class="option">
       <div class="favorite-btn">
-        <% if current_user.already_liked?(@tweet) %>
-          <%= link_to tweet_likes_path(@tweet), method: :delete do%>
-            <%= image_tag "unlike.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-          <% end %>
-        <% else %>
-          <%= link_to tweet_likes_path(@tweet), method: :post do%>
-            <%= image_tag "like.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-          <% end %>
-        <% end %>
-        <span>いいね <%= @tweet.likes.count %></span>
+        <span class="favorite">いいね</span>
+        <div class='star-btn' id='like_<%= @tweet.id %>'>
+          <%= render partial: 'shared/like', locals: { tweet: @tweet } %>
+        </div>
       </div>
     </div>
 
