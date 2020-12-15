@@ -84,9 +84,8 @@
           </div>
           <div class='fish-address'>
             <%= tweet.address %>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+            <div class='star-btn' id='like_<%= tweet.id %>'>
+              <%= render partial: 'shared/like', locals: { tweet: tweet } %>
             </div>
           </div>
         </div>
