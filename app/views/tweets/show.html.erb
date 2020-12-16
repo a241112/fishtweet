@@ -106,8 +106,8 @@
 
     <div class="edit-destroy-btn">
       <% if user_signed_in? && current_user == @tweet.user %>
-        <%= link_to '編集', edit_tweet_path, method: :get, class: "fish-red-btn" %>
-        <%= link_to '削除', tweet_path, method: :delete, class:'fish-destroy' %>
+        <%= link_to '編集', edit_user_tweet_path, method: :get, class: "fish-red-btn" %>
+        <%= link_to '削除', user_tweet_path, method: :delete, class:'fish-destroy' %>
       <% end %>
     </div>
   </div>
@@ -120,7 +120,7 @@
         不快な言葉遣いなどは利用制限や退会処分となることがあります。
       </p>
     <div class="message-form">
-      <%= form_with model: [@tweet, @message] do |f| %>
+      <%= form_with model: [@user, @tweet, @message] do |f| %>
         <%= f.text_area :text, class:"message-default" %>
         <%= f.submit 'コメントする' , class:"message-btn" %>
       <% end %>
@@ -135,7 +135,7 @@
           <%= l message.created_at %>
         </div>
         <% if user_signed_in? && current_user == message.user %>
-          <%= link_to '削除', tweet_message_path(@tweet, message), method: :delete, class:'message-destroy' %>
+          <%= link_to '削除', user_tweet_message_path(@user ,@tweet, message), method: :delete, class: "message-destroy"%>
         <% end %>
       </div>
       <div class="lower-message">
