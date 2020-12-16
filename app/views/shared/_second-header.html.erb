@@ -2,8 +2,8 @@
   <%= link_to image_tag("Fishtweet.png", class:"fishtweet-icon"), "/" %>
   <ul class='lists-right'>
     <% if user_signed_in? %> 
-        <li><%= link_to '釣果を投稿する', new_tweet_path, class: "new-tweet" %></li>
-        <li><%= link_to current_user.name, "#", class: "user-name" %></li>
+        <li><%= link_to '釣果を投稿する', new_user_tweet_path(current_user.id), class: "new-tweet" %></li>
+        <li><%= link_to current_user.name, user_path(current_user.id), class: "user-name" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>
         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>

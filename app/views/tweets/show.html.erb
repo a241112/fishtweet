@@ -95,6 +95,7 @@
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJYMywyohq0hX3wwCayFEE_azosNW6Oeg&callback=initMap" async defer></script>
     </div>
 
+    <% if user_signed_in? %>
     <div class="option">
       <div class="favorite-btn">
         <span class="favorite">いいね</span>
@@ -103,15 +104,17 @@
         </div>
       </div>
     </div>
+    <% end %>
 
     <div class="edit-destroy-btn">
       <% if user_signed_in? && current_user == @tweet.user %>
-        <%= link_to '編集', edit_tweet_path, method: :get, class: "fish-red-btn" %>
-        <%= link_to '削除', tweet_path, method: :delete, class:'fish-destroy' %>
+        <%= link_to '編集', edit_user_tweet_path, method: :get, class: "fish-red-btn" %>
+        <%= link_to '削除', user_tweet_path, method: :delete, class:'fish-destroy' %>
       <% end %>
     </div>
   </div>
 
+  <% if user_signed_in? %>
   <div class="message-box">
     <h3>みんなのコメント</h3>
       <p class="message-warn">
@@ -135,7 +138,7 @@
           <%= l message.created_at %>
         </div>
         <% if user_signed_in? && current_user == message.user %>
-          <%= link_to '削除', tweet_message_path(@tweet, message), method: :delete, class:'message-destroy' %>
+          <%= link_to '削除', tweet_message_path(@tweet, message), method: :delete, class: "message-destroy"%>
         <% end %>
       </div>
       <div class="lower-message">
@@ -145,6 +148,8 @@
       </div>
       <% end %>
     </div>
+  </div>
+  <% end %>
 </div>
 
 <%= render "shared/second-footer" %>
