@@ -1,0 +1,63 @@
+<%= render "shared/second-header" %>
+  <div class='fish-contents'>
+    <h2 class='title'><%= @user.name %>の釣果一覧</h2>
+    <ul class='fish-lists'>
+    <% @user.tweets.each do |tweet| %>
+      <li class='list'>
+        <%= link_to user_tweet_path(current_user.id,tweet.id) do %>
+        <div class='fish-img-content'>
+          <%= image_tag tweet.image, class: "fish-img" %>
+        </div>
+        <div class='fish-info'>
+          <div class="fish-time">
+            <%= l tweet.datetime %>
+          </div>
+          <h3 class='fish-name'>
+            <%= tweet.type_name %>
+          </h3>
+          <div class='fish-size'>
+            <%= tweet.size_id %>cm
+          </div>
+          <div class='fish-address'>
+            <%= tweet.address %>
+            <div class='star-btn' id='like_<%= tweet.id %>'>
+              <%= render partial: 'shared/like', locals: { tweet: tweet } %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
+
+    <h2 class='title'><%= @user.name %>のいいね一覧</h2>
+    <ul class="fish-lists">
+      <% @user.liked_tweets.each do |tweet| %>
+        <li class='list'>
+        <%= link_to user_tweet_path(current_user.id,tweet.id) do %>
+        <div class='fish-img-content'>
+          <%= image_tag tweet.image, class: "fish-img" %>
+        </div>
+        <div class='fish-info'>
+          <div class="fish-time">
+            <%= l tweet.datetime %>
+          </div>
+          <h3 class='fish-name'>
+            <%= tweet.type_name %>
+          </h3>
+          <div class='fish-size'>
+            <%= tweet.size_id %>cm
+          </div>
+          <div class='fish-address'>
+            <%= tweet.address %>
+            <div class='star-btn' id='like_<%= tweet.id %>'>
+              <%= render partial: 'shared/like', locals: { tweet: tweet } %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+<%= render "shared/second-footer" %>
