@@ -95,6 +95,7 @@
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJYMywyohq0hX3wwCayFEE_azosNW6Oeg&callback=initMap" async defer></script>
     </div>
 
+    <% if user_signed_in? %>
     <div class="option">
       <div class="favorite-btn">
         <span class="favorite">いいね</span>
@@ -103,6 +104,7 @@
         </div>
       </div>
     </div>
+    <% end %>
 
     <div class="edit-destroy-btn">
       <% if user_signed_in? && current_user == @tweet.user %>
@@ -112,6 +114,7 @@
     </div>
   </div>
 
+  <% if user_signed_in? %>
   <div class="message-box">
     <h3>みんなのコメント</h3>
       <p class="message-warn">
@@ -120,7 +123,7 @@
         不快な言葉遣いなどは利用制限や退会処分となることがあります。
       </p>
     <div class="message-form">
-      <%= form_with model: [@user, @tweet, @message] do |f| %>
+      <%= form_with model: [@tweet, @message] do |f| %>
         <%= f.text_area :text, class:"message-default" %>
         <%= f.submit 'コメントする' , class:"message-btn" %>
       <% end %>
@@ -135,7 +138,7 @@
           <%= l message.created_at %>
         </div>
         <% if user_signed_in? && current_user == message.user %>
-          <%= link_to '削除', user_tweet_message_path(@user ,@tweet, message), method: :delete, class: "message-destroy"%>
+          <%= link_to '削除', tweet_message_path(@tweet, message), method: :delete, class: "message-destroy"%>
         <% end %>
       </div>
       <div class="lower-message">
@@ -145,6 +148,8 @@
       </div>
       <% end %>
     </div>
+  </div>
+  <% end %>
 </div>
 
 <%= render "shared/second-footer" %>

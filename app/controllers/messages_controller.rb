@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
   def destroy
     @message = Message.find(params[:id])
     @message.destroy
-    redirect_to user_tweet_path(current_user.id,params[:tweet_id])
+    redirect_to tweet_path(params[:tweet_id])
   end
 
   private
