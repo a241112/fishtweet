@@ -3,7 +3,8 @@ class TweetsController < ApplicationController
    before_action :set_user, only: [:new, :edit, :update, :destroy]
 
   def index
-    @tweet = Tweet.all
+    @search = Tweet.ransack(params[:q])
+    @tweet = @search.result
   end
 
   def new
