@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
-   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
-   before_action :set_user, only: [:new, :edit, :update, :destroy]
+  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:new, :edit, :update, :destroy]
 
   def index
     @search = Tweet.ransack(params[:q])
@@ -47,7 +47,7 @@ class TweetsController < ApplicationController
   def set_tweet
     @tweet = Tweet.find(params[:id])
   end
-  
+
   def set_user
     @user = User.find(params[:user_id])
   end
@@ -57,5 +57,4 @@ class TweetsController < ApplicationController
   def tweet_params
     params.require(:tweet).permit(:image, :type_name, :datetime, :quantity_id, :size_id, :weather_id, :wind_id, :feed, :address, :latitude, :longitude, :description).merge(user_id: current_user.id)
   end
-
 end

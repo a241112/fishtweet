@@ -7,8 +7,6 @@ class UsersController < ApplicationController
   end
 
   def ensure_current_user
-    if current_user.id != params[:id].to_i
-      redirect_to user_path(current_user.id)
-    end
+    redirect_to user_path(current_user.id) if current_user.id != params[:id].to_i
   end
 end

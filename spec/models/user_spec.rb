@@ -21,12 +21,12 @@ RSpec.describe User, type: :model do
       it 'nameが空では登録できない' do
         @user.name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("ニックネームを入力してください")
+        expect(@user.errors.full_messages).to include('ニックネームを入力してください')
       end
       it 'emailが空では登録できない' do
         @user.email = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Eメールを入力してください")
+        expect(@user.errors.full_messages).to include('Eメールを入力してください')
       end
       it 'emailに@が含まれていないと登録できない' do
         @user.email = 'aaaxxx.com'
@@ -43,7 +43,7 @@ RSpec.describe User, type: :model do
       it 'passwordが空では登録できない' do
         @user.password = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードを入力してください")
+        expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
       it 'passwordが５文字以下であれば登録できない' do
         @user.password = '00000'
@@ -66,7 +66,7 @@ RSpec.describe User, type: :model do
       it 'passwordが存在してもpassword_confirmationが空では登録できない' do
         @user.password_confirmation = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
       it 'prefecture_idが「---」のままでは投稿できない' do
         @user.prefecture_id = 0
