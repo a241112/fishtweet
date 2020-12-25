@@ -1,0 +1,11 @@
+
+  <% if current_user.already_liked?(tweet) %>
+    <%= link_to user_tweet_likes_path(current_user.id,tweet), method: :delete, remote: true do%>
+      <%= image_tag "unlike.png", class:"star-icon" %>
+    <% end %>
+  <% else %>
+    <%= link_to user_tweet_likes_path(current_user.id,tweet), method: :post, remote: true do%>
+      <%= image_tag "like.png", class:"star-icon" %>
+    <% end %>
+  <% end %>
+  <span class='star-count'><%= tweet.likes.count %></span>

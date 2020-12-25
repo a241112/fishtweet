@@ -1,4 +1,8 @@
 ja:
+ time:
+   formats:
+     default: "%Y/%m/%d %H:%M"
+
  activerecord:
    attributes:
      user:
@@ -7,7 +11,7 @@ ja:
      tweet:
        image: 画像
        type_name: 魚種
-       date: 日時
+       datetime: 日時
        quantity_id: 数量
        size_id: サイズ
        weather_id: 天気

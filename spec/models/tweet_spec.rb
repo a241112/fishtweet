@@ -7,7 +7,7 @@ RSpec.describe Tweet, type: :model do
 
   describe '投稿機能' do
     context '投稿できるとき' do
-      it 'image、type_name、quantity_id、size_id、weather_id、wind_id、feed、addressが存在すれば投稿できる' do
+      it 'image、type_name、datetime、quantity_id、size_id、weather_id、wind_id、feed、addressが存在すれば投稿できる' do
         expect(@tweet).to be_valid
       end
     end
@@ -16,17 +16,17 @@ RSpec.describe Tweet, type: :model do
       it 'imageが空では投稿できない' do
         @tweet.image = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("画像を入力してください")
+        expect(@tweet.errors.full_messages).to include('画像を入力してください')
       end
       it 'type_nameが空では投稿できない' do
         @tweet.type_name = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("魚種を入力してください")
+        expect(@tweet.errors.full_messages).to include('魚種を入力してください')
       end
-      it 'dateが空では投稿できない' do
-        @tweet.date = ''
+      it 'datetimeが空では投稿できない' do
+        @tweet.datetime = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("日時を入力してください")
+        expect(@tweet.errors.full_messages).to include('日時を入力してください')
       end
       it 'quantity_idが「---」のままでは投稿できない' do
         @tweet.quantity_id = 0
@@ -46,25 +46,23 @@ RSpec.describe Tweet, type: :model do
       it 'feedが空では投稿できない' do
         @tweet.feed = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("エサを入力してください")
+        expect(@tweet.errors.full_messages).to include('エサを入力してください')
       end
       it 'addressが空では投稿できない' do
         @tweet.address = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("釣れた場所を入力してください")
+        expect(@tweet.errors.full_messages).to include('釣れた場所を入力してください')
       end
       it 'type_nameが全角カタカナでなければ投稿できない' do
         @tweet.type_name = 'さば'
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("魚種は全角カタカナで入力してください")
+        expect(@tweet.errors.full_messages).to include('魚種は全角カタカナで入力してください')
       end
       it 'feedが全角文字でなければ投稿できない' do
         @tweet.feed = 'ﾙｱｰ'
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("エサは全角文字で入力してください")
+        expect(@tweet.errors.full_messages).to include('エサは全角文字で入力してください')
       end
-      
-      
     end
   end
 end

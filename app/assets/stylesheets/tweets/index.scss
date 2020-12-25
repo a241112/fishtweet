@@ -71,9 +71,9 @@ a {
   height: 9vh;
 }
 
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
+/* //画面上部の「釣果情報アプリ」帯部分 */
 
-/* FURIMAが選ばれる3つの理由部分 */
+/* Fishtweetが選ばれる3つの理由部分 */
 .select-reason-contents {
   padding: 5vh 15vw;
 }
@@ -128,12 +128,12 @@ a {
   margin-top: 20px;
 }
 
-/* //FURIMAが選ばれる3つの理由部分 */
+/* //Fishtweetが選ばれる3つの理由部分 */
 
 
-/* 商品一覧 */
+/* 釣果一覧 */
 
-.item-contents {
+.fish-contents {
   background-color: #FFF;
   display: flex;
   flex-direction: column;
@@ -141,7 +141,7 @@ a {
   padding: 10vh 0;
 }
 
-.item-contents>.title {
+.fish-contents>.title {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
@@ -149,7 +149,7 @@ a {
   position: relative;
 }
 
-.item-contents>.title::after {
+.fish-contents>.title::after {
   content: '';
   width: 180px;
   height: 4px;
@@ -160,61 +160,50 @@ a {
   transform: translateX(-50%);
 }
 
-.item-lists {
+.fish-lists {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.item-lists>.list {
-  width: 37vh;
+.fish-lists>.list {
+  width: 40vh;
   padding: 1vw;
   background-color: #FFF;
 }
 
 
-.item-img-content {
+.fish-img-content {
   position: relative;
 }
 
-.item-img {
-  width: 33vh;
-  height: 33vh;
+.fish-img {
+  width: 35vh;
+  height: 35vh;
+  object-fit: cover;
+  object-position: center;
 }
 
-.sold-out {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
-}
-
-.sold-out>span {
-  color: #FFF;
-  font-size: 45px;
-  font: bold;
-}
-
-
-.item-info {
+.fish-info {
   background-color: #FFF;
   color: black;
   padding: 1vw;
 }
 
-.item-name {
+.fish-name {
   font-size: 2.5vh;
 }
 
-.item-price {
-  font-size: 1.5vh;
+.fish-size {
+  font-size: 2.5vh;
+}
+
+.fish-address {
+  font-size: 2.5vh;
   display: flex;
   justify-content: space-between;
 }
-
 
 .star-btn {
   display: flex;
@@ -222,13 +211,14 @@ a {
 }
 
 .star-icon {
-  height: 2vh;
-  width: 2vh;
-  margin-right: 0.5vw;
+  height: 25px;
+  width: 25px;
+  margin-right: 7px;
 }
 
 .star-count {
   font-size: 2vh;
+  margin-top: 2px;
 }
 
-/* //商品一覧 */
+/* //釣果一覧 */
