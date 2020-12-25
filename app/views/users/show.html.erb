@@ -4,7 +4,7 @@
     <ul class='fish-lists'>
     <% @user.tweets.each do |tweet| %>
       <li class='list'>
-        <%= link_to user_tweet_path(current_user.id,tweet.id) do %>
+        <%= link_to tweet_path(tweet) do %>
         <div class='fish-img-content'>
           <%= image_tag tweet.image, class: "fish-img" %>
         </div>
@@ -34,7 +34,7 @@
     <ul class="fish-lists">
       <% @user.liked_tweets.each do |tweet| %>
         <li class='list'>
-        <%= link_to user_tweet_path(current_user.id,tweet.id) do %>
+        <%= link_to tweet_path(tweet) do %>
         <div class='fish-img-content'>
           <%= image_tag tweet.image, class: "fish-img" %>
         </div>
