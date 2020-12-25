@@ -30,19 +30,7 @@
           <span class="indispensable">必須</span>
         </div>
         <div class='input-date-wrap'>
-          <%= raw sprintf(
-            f.datetime_select(
-              :datetime,
-              {
-                use_month_numbers: true ,
-                default:Time.now,
-                date_separator: '%s',# 年, 月
-                datetime_separator: '%s',# 日
-                time_separator: '%s'# 時
-              },
-              {class: "date-select"}
-              ),
-              '年 ', '月 ', '日 ', '時 ') + '分'%>
+          <%= f.datetime_field :datetime, {class:"select-box"}%>
         </div>
       </div>
 
