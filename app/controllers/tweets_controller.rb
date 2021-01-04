@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
 
   def index
     @search = Tweet.ransack(params[:q])
-    @tweet = @search.result
+    @tweet = @search.result.order('datetime DESC')
   end
 
   def new
