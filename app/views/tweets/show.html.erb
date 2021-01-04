@@ -3,7 +3,7 @@
 <div class="fish-show">
   <div class="fish-img-box">
     <h2 class="name">
-      <%= @tweet.type_name %>
+      <%= @tweet.user.name  %> さんの <%= @tweet.type_name %>
     </h2>
     <div class='fish-img-content'>
       <%= image_tag @tweet.image ,class:"fish-show-img" %>
@@ -92,7 +92,7 @@
           });
         }
       </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJYMywyohq0hX3wwCayFEE_azosNW6Oeg&callback=initMap" async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API'] %>&callback=initMap" async defer></script>
     </div>
 
     <% if user_signed_in? %>
