@@ -107,9 +107,9 @@
     <% end %>
 
     <div class="edit-destroy-btn">
-      <% if user_signed_in? && current_user == @tweet.user_id %>
-        <%= link_to '編集', edit_user_tweet_path, method: :get, class: "fish-red-btn" %>
-        <%= link_to '削除', user_tweet_path, method: :delete, class:'fish-destroy' %>
+      <% if user_signed_in? && current_user == @tweet.user %>
+        <%= link_to '編集', edit_user_tweet_path(@tweet.user_id), method: :get, class: "fish-red-btn" %>
+        <%= link_to '削除', user_tweet_path(@tweet.user_id), method: :delete, class:'fish-destroy' %>
       <% end %>
     </div>
   </div>

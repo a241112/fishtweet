@@ -75,12 +75,9 @@ a {
   flex-direction: column;
   align-items: center;
   position: relative;
-<<<<<<< Updated upstream
-=======
   list-style: none;
   background: #f8f8f8;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
->>>>>>> Stashed changes
 }
 
 .list-pict {
@@ -136,6 +133,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  list-style: none;
 }
 
 .fish-lists>.list {
