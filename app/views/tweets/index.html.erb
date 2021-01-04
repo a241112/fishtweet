@@ -25,7 +25,7 @@
         <h3 class='reason-list-text'>
           細かいデータが見れる
         </h3>
-        <%# <%= image_tag "#", class:"list-pict" %> %>
+        <%= image_tag "fishtweet-intro04.png", class:"list-pict" %>
         <p class='reason-list-description'>
           天候や餌、時間帯などを<br>投稿するので、どんな条件で<br>釣れたかが分かります
         </p>
@@ -34,7 +34,7 @@
         <h3 class='reason-list-text'>
           釣れた場所を地図で確認
         </h3>
-        <%# <%= image_tag "#", class:"list-pict" %> %>
+        <%= image_tag "fishtweet-intro02.png", class:"list-pict" %>
         <p class='reason-list-description'>
           実際に釣れた場所を地図上で<br>確認できます
         </p>
@@ -43,7 +43,7 @@
         <h3 class='reason-list-text'>
           気に入った投稿にいいね
         </h3>
-        <%# <%= image_tag "#", class:"list-pict" %> %>
+        <%= image_tag "fishtweet-intro03.png", class:"list-pict" %>
         <p class='reason-list-description'>
           気に入った投稿はいいねして<br>マイページからいつでも<br>確認できます
         </p>
@@ -72,6 +72,9 @@
           </div>
           <% end %>
         <div class='fish-info'>
+          <div class="fish-username">
+            <%= tweet.user.name %>
+          </div>
           <div class="fish-time">
             <%= l tweet.datetime %>
           </div>
