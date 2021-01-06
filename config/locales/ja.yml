@@ -18,4 +18,6 @@ ja:
        wind_id: 風速
        feed: エサ
        address: 釣れた場所
+       latitude: 緯度
+       longitude: 経度
        description: コメント
