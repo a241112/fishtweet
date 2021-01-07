@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: fishtweet_production
-  username: fishtweet
-  password: <%= ENV['FISHTWEET_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
