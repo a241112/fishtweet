@@ -1,57 +1,97 @@
 # README
+![Fishtweet](https://user-images.githubusercontent.com/70367662/103937886-c0ece300-516c-11eb-9649-1efc9ca6caf4.png)
+# アプリケーション名
+Fishtweet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+誰でも閲覧できる釣果情報投稿アプリ
 
-Things you may want to cover:
+# URL
+https://fishtweet.herokuapp.com/
 
-* Ruby version
+# テスト用アカウント
+・ID/Pass
+ID: admin
+Pass: 2222
+・テスト用アカウント等
+email: tarou@gmail.com
+password: 1234tarou
 
-* System dependencies
+# 利用方法
+ログアウト時
+・投稿一覧表示機能
+・投稿詳細表示機能
+・投稿検索機能
+ログイン時
+・投稿機能
+・投稿編集機能
+・投稿削除機能
+・いいね機能
+・コメント機能
+・マイページ表示機能
 
-* Configuration
+# 目指した課題解決
+自分が釣り初心者の頃に感じた
+釣りたい魚がどこで釣れているのか？
+どんなエサを使っているのか？
+などの釣果情報を共有できたらいいなという思いで
+アプリケーションを作成しました。
 
-* Database creation
+# 実装機能
+ユーザー機能
+・ログイン/ログアウト機能
 
-* Database initialization
+投稿機能
+・投稿の一覧表示（トップページ）
+・投稿の作成
+・投稿の詳細表示
+・投稿の編集
+・投稿の削除
 
-* How to run the test suite
+コメント機能
+・コメントの投稿（非同期）
+・コメントの削除
 
-* Services (job queues, cache servers, search engines, etc.)
+いいね機能
+・投稿一覧表示ページからのいいね機能（非同期）
+・投稿詳細表示ぺーじからのいいね機能（非同期）
 
-* Deployment instructions
+マイページ機能
+・ログインユーザーの投稿を一覧表示
+・ログインユーザーがいいねした投稿を一覧表示
 
-* ...
+# 使用技術
+こだわりポイント
+1.インフラにAWSを使用
+2.GooglemapAPIを使用することで、釣れた場所をわかりやすく表示
+3.コメント、いいね機能の非同期対応
+
+# 実装予定の機能
+・釣り場までのナビ機能
+・レスポンシブ対応
+・ユーザー情報の編集機能
+
+# データベース設計
+![Fishtweet_ER図](https://user-images.githubusercontent.com/70367662/103926872-dfe37900-515c-11eb-9a52-2e3497846a9c.png)
 
 
-## usersテーブル
+# 使用言語技術
+バックエンド
+・Ruby2.6.5
+・Ruby on Rails 6.0.0
 
-| Column          | Type    | Options     |
-| --------------- | ------  | ----------- |
-| name            | string  | null: false |
-| email           | string  | null: false |
-| password        | string  | null: false |
-| prefecture_id   | integer | null: false |
+フロントエンド
+・HTML
+・CSS
+・JavaScript
+・JQuery
 
-### Association
+データベース
+・MySQL
 
-- has_many :tweets
+サーバー
+・AWS
 
-## tweetsテーブル
 
-| Column         | Type       | Options                        |
-| -------------- | ------     | ------------------------------ |
-| description    | text       |                                |
-| type           | string     | null: false                    |
-| date           | time       | null: false                    |
-| quantity_id    | integer    | null: false                    |
-| size_id        | integer    | null: false                    |
-| weather_id     | integer    | null: false                    |
-| wind_id        | integer    |                                |
-| feed           | string     | null: false                    |
-| address        | string     | null: false                    |
-| user_id        | integer    | null: false, foreign_key: true |
 
-### Association
 
-- belongs_to :user
