@@ -23,17 +23,15 @@ a {
 }
 
 .service-title {
-  font-size: 8vh;
+  font-size: 4vw;
   margin-bottom: 3vh;
 }
 
 .service-explain {
-  font-size: 2.5vh;
+  font-size: 1.5vw;
   line-height: 40px;
   margin-bottom: 2vh;
 }
-
-
 
 /* //画面上部の「釣果情報アプリ」帯部分 */
 
@@ -49,7 +47,6 @@ a {
   margin-bottom: 5vh;
   position: relative;
 }
-
 
 .select-reason-contents>.title::after {
   content: '';
@@ -69,7 +66,7 @@ a {
 }
 
 .reason-lists>.list {
-  width: 42vh;
+  width: 22vw;
   padding: 3.5vh;
   display: flex;
   flex-direction: column;
@@ -87,12 +84,12 @@ a {
 
 .reason-list-text {
   font-weight: bold;
-  font-size: 22px;
-  line-height: 50px;
+  font-size: 1.5vw;
+  line-height: 25px;
 }
 
 .reason-list-description {
-  font-size: 18px;
+  font-size: 1.3vw;
   margin-top: 20px;
 }
 
@@ -141,7 +138,6 @@ a {
   padding: 1vw;
   background-color: #FFF;
 }
-
 
 .fish-img-content {
   position: relative;
@@ -203,3 +199,412 @@ a {
 }
 
 /* //釣果一覧 */
+
+/* タブレット表示時 */
+
+@media (max-width: 1024px) {
+  a {
+    text-decoration: none;
+  }
+  
+  .main {
+    background: rgb(170, 216, 245);
+  }
+  
+  /* 画面上部の「釣果情報アプリ」帯部分 */
+  .title-contents {
+    width: 100vw;
+    background-image: image-url('header.png');
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5vh 15vw;
+    color: blue;
+    text-shadow: 0 0 5px rgba(238, 236, 236, 0.9);
+  }
+  
+  .service-title {
+    font-size: 7vw;
+    margin-bottom: 3vh;
+  }
+  
+  .service-explain {
+    font-size: 2.5vw;
+    line-height: 40px;
+    margin-bottom: 2vh;
+  }
+  
+  /* //画面上部の「釣果情報アプリ」帯部分 */
+  
+  /* Fishtweetが選ばれる3つの理由部分 */
+  .select-reason-contents {
+    padding: 5vh 15vw;
+  }
+  
+  .select-reason-contents>.title {
+    text-align: center;
+    font-size: 3.5vh;
+    font-weight: bold;
+    margin-bottom: 5vh;
+    position: relative;
+  }
+  
+  .select-reason-contents>.title::after {
+    content: '';
+    width: 250px;
+    height: 4px;
+    background-color: blue;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .reason-lists {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .reason-lists>.list {
+    width: 22vw;
+    padding: 3.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    background: #f8f8f8;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  }
+  
+  .list-pict {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .reason-list-text {
+    font-weight: bold;
+    font-size: 1.2vw;
+  }
+  
+  .reason-list-description {
+    font-size: 1vw;
+    margin-top: 20px;
+  }
+  
+  /* //Fishtweetが選ばれる3つの理由部分 */
+  
+  
+  /* 釣果一覧 */
+  
+  .fish-contents {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0;
+  }
+  
+  .fish-contents>.title {
+    font-size: 5vh;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 5vh;
+    position: relative;
+  }
+  
+  .fish-contents>.title::after {
+    content: '';
+    width: 180px;
+    height: 4px;
+    background-color: blue;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .fish-lists {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .fish-lists>.list {
+    width: 20vh;
+    padding: 1vw;
+    background-color: #FFF;
+  }
+  
+  .fish-img-content {
+    position: relative;
+  }
+  
+  .fish-img {
+    width: 15vh;
+    height: 15vh;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .fish-info {
+    background-color: #FFF;
+    color: black;
+    padding: 1vw;
+  }
+  
+  .fish-username {
+    font-size: 2.5vh;
+    margin-bottom: 7px;
+  }
+  
+  .fish-time { 
+    font-size: 2vh;
+    margin-bottom: 3px;
+  }
+  
+  .fish-name {
+    font-size: 2.5vh;
+    margin-bottom: 3px;
+  }
+  
+  .fish-size {
+    font-size: 2.5vh;
+    margin-bottom: 3px;
+  }
+  
+  .fish-address {
+    font-size: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .star-btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star-icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 7px;
+  }
+  
+  .star-count {
+    font-size: 2vh;
+    margin-top: 2px;
+  }
+
+}
+
+/* スマホ表示時 */
+
+@media (max-width: 599px) {
+
+  a {
+    text-decoration: none;
+  }
+  
+  .main {
+    background: rgb(170, 216, 245);
+  }
+  
+  /* 画面上部の「釣果情報アプリ」帯部分 */
+  .title-contents {
+    width: 100vw;
+    background-image: image-url('header.png');
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5vh 15vw;
+    color: blue;
+    text-shadow: 0 0 5px rgba(238, 236, 236, 0.9);
+  }
+  
+  .service-title {
+    font-size: 6vw;
+    margin-bottom: 3vh;
+  }
+  
+  .service-explain {
+    font-size: 2vw;
+    line-height: 20px;
+    margin-bottom: 2vh;
+  }
+  
+  /* //画面上部の「釣果情報アプリ」帯部分 */
+  
+  /* Fishtweetが選ばれる3つの理由部分 */
+  .select-reason-contents {
+    padding: 5vh 15vw;
+  }
+  
+  .select-reason-contents>.title {
+    text-align: center;
+    font-size: 3.5vh;
+    font-weight: bold;
+    margin-bottom: 5vh;
+    position: relative;
+  }
+  
+  .select-reason-contents>.title::after {
+    content: '';
+    width: 250px;
+    height: 4px;
+    background-color: blue;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .reason-lists {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .reason-lists>.list {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    background: #f8f8f8;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  }
+  
+  .list-pict {
+    margin-bottom: 5px;
+    width: 30%;
+  }
+  
+  .reason-list-text {
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 20px;
+  }
+  
+  .reason-list-description {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  
+  /* //Fishtweetが選ばれる3つの理由部分 */
+  
+  
+  /* 釣果一覧 */
+  
+  .fish-contents {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0;
+  }
+  
+  .fish-contents>.title {
+    font-size: 5vh;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 5vh;
+    position: relative;
+  }
+  
+  .fish-contents>.title::after {
+    content: '';
+    width: 180px;
+    height: 4px;
+    background-color: blue;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .fish-lists {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .fish-lists>.list {
+    width: 20vh;
+    padding: 1vw;
+    background-color: #FFF;
+  }
+  
+  .fish-img-content {
+    position: relative;
+  }
+  
+  .fish-img {
+    width: 15vh;
+    height: 15vh;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .fish-info {
+    background-color: #FFF;
+    color: black;
+    padding: 1vw;
+  }
+  
+  .fish-username {
+    font-size: 2.5vh;
+    margin-bottom: 7px;
+  }
+  
+  .fish-time { 
+    font-size: 2vh;
+    margin-bottom: 3px;
+  }
+  
+  .fish-name {
+    font-size: 2.5vh;
+    margin-bottom: 3px;
+  }
+  
+  .fish-size {
+    font-size: 2.5vh;
+    margin-bottom: 3px;
+  }
+  
+  .fish-address {
+    font-size: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .star-btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star-icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 7px;
+  }
+  
+  .star-count {
+    font-size: 2vh;
+    margin-top: 2px;
+  }
+
+}
