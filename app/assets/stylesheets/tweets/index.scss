@@ -116,7 +116,7 @@ a {
 
 .fish-contents>.title::after {
   content: '';
-  width: 180px;
+  width: 350px;
   height: 4px;
   background-color: blue;
   position: absolute;
@@ -311,7 +311,7 @@ a {
   }
   
   .fish-contents>.title {
-    font-size: 5vh;
+    font-size: 3vw;
     line-height: 1.4;
     font-weight: bold;
     margin-bottom: 5vh;
@@ -320,7 +320,7 @@ a {
   
   .fish-contents>.title::after {
     content: '';
-    width: 180px;
+    width: 30vw;
     height: 4px;
     background-color: blue;
     position: absolute;
@@ -452,7 +452,7 @@ a {
   
   .select-reason-contents>.title {
     text-align: center;
-    font-size: 3.5vh;
+    font-size: 3.5vw;
     font-weight: bold;
     margin-bottom: 5vh;
     position: relative;
@@ -516,7 +516,7 @@ a {
   }
   
   .fish-contents>.title {
-    font-size: 5vh;
+    font-size: 3vw;
     line-height: 1.4;
     font-weight: bold;
     margin-bottom: 5vh;
@@ -525,7 +525,7 @@ a {
   
   .fish-contents>.title::after {
     content: '';
-    width: 180px;
+    width: 30vw;
     height: 4px;
     background-color: blue;
     position: absolute;
