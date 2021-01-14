@@ -1,3 +1,4 @@
+<div class="wrapper">
 <%= render "shared/second-header" %>
 
   <div class="contents-row">
@@ -91,12 +92,13 @@
           <span class="indispensable">必須</span>
         </div>
         <input id="address" type="textbox" placeholder="漁港名など">
-        <input type="button" value="検索" onclick="codeAddress()">
+        <input type="button" value="地図で検索" onclick="codeAddress()">
           <input type="hidden" name="tweet[address]" id="hidden_address">
-          <%= f.text_field :address, class:"input-default", placeholder: "漁港名など" %>
       </div>
+        <div class="form-address">
+          <%= f.text_field :address, style: "border: none", class:"input-default" %>
+        </div>
 
-      <h2>gmap</h2>
       <div id='map'>
       </div>
 
@@ -175,3 +177,4 @@
   </div>
 
 <%= render "shared/second-footer" %>
+</div>
