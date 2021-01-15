@@ -7,6 +7,9 @@ ja:
    attributes:
      user:
        name: ニックネーム
+       email: メールアドレス
+       password: パスワード
+       password_confirmation: 確認用パスワード
        prefecture_id: 活動エリア
      tweet:
        image: 画像
