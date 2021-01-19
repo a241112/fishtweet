@@ -28,6 +28,12 @@
   align-items: center;
 }
 
+.btn:hover{
+  opacity: 0.5;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
 /* タブレット表示時 */
 
 @media (max-width: 1024px) {
@@ -62,6 +68,12 @@
   }
 }
 
+.btn:hover{
+  opacity: 0.5;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
 /* スマホ表示時 */
 
 @media (max-width: 599px) {
@@ -93,4 +105,10 @@
     list-style: none;
     align-items: center;
   }
+}
+
+.btn:hover{
+  opacity: 0.5;
+  transition: all 0.5s;
+  cursor: pointer;
 }
