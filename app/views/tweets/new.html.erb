@@ -80,7 +80,7 @@
           <span class="indispensable">必須</span>
         </div>
         <input id="address" type="textbox" placeholder="漁港名など">
-        <input type="button" value="地図で検索" onclick="codeAddress()">
+        <input type="button" value="地図で検索" onclick="codeAddress()" class="btn">
           <input type="hidden" name="tweet[address]" id="hidden_address">
       </div>
         <div class="form-address">
@@ -149,7 +149,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "投稿する", class:"login-btn" %>
+        <%= f.submit "投稿する", class:"btn login-btn" %>
       </div>
 
       <% end %>

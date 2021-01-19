@@ -84,6 +84,13 @@ html,body{
   background-color: royalblue;
   color: #f5f5f5;
   cursor: pointer;
+  box-shadow: 0 3px #0e0f46;
+}
+
+.login-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 3px;
 }
 
 .date-select{
