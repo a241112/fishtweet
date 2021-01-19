@@ -30,6 +30,13 @@
   color: #f5f5f5;
   cursor: pointer;
   margin: 10px;
+  box-shadow: 0 3px #0e0f46;
+}
+
+.message-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 3px;
 }
 
 .upper-message{

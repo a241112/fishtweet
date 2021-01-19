@@ -57,6 +57,14 @@ html,body{
   color: #FFF;
   margin: 20px 40px;
   padding: 1vh 4vw;
+  box-shadow: 0 3px #860510;
+  border-radius: 5px;
+}
+
+.fish-red-btn:active{
+  box-shadow: none;
+  position: relative;
+  top: 3px;
 }
 
 .fish-destroy {
@@ -66,6 +74,14 @@ html,body{
   color: black;
   margin: 20px 40px;
   padding: 1vh 4vw;
+  box-shadow: 0 3px #686767;
+  border-radius: 5px;
+}
+
+.fish-destroy:active{
+  box-shadow: none;
+  position: relative;
+  top: 3px;
 }
 
 .fish-explain-box {
@@ -204,6 +220,14 @@ html,body{
     color: #FFF;
     margin: 20px 40px;
     padding: 1vh 4vw;
+    box-shadow: 0 3px #860510;
+    border-radius: 5px;
+  }
+
+  .fish-red-btn:active{
+    box-shadow: none;
+    position: relative;
+    top: 3px;
   }
   
   .fish-destroy {
@@ -213,6 +237,14 @@ html,body{
     color: black;
     margin: 20px 40px;
     padding: 1vh 4vw;
+    box-shadow: 0 3px #686767;
+    border-radius: 5px;
+  }
+
+  .fish-destroy:active{
+    box-shadow: none;
+    position: relative;
+    top: 3px;
   }
   
   .fish-explain-box {
@@ -352,6 +384,14 @@ html,body{
     color: #FFF;
     margin: 20px 10vw;
     padding: 1vh 4vw;
+    box-shadow: 0 3px #860510;
+    border-radius: 5px;
+  }
+
+  .fish-red-btn:active{
+    box-shadow: none;
+    position: relative;
+    top: 3px;
   }
   
   .fish-destroy {
@@ -361,6 +401,14 @@ html,body{
     color: black;
     margin: 20px 10vw;
     padding: 1vh 4vw;
+    box-shadow: 0 3px #686767;
+    border-radius: 5px;
+  }
+
+  .fish-destroy:active{
+    box-shadow: none;
+    position: relative;
+    top: 3px;
   }
   
   .fish-explain-box {

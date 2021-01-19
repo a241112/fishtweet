@@ -59,7 +59,7 @@
     <h2 class='title'>釣果一覧</h2>
       <%= search_form_for @search, url:root_path do |f| %>
         <%= f.search_field :type_name_or_address_cont, placeholder: "魚種 or 釣れた場所" %>
-        <%= f.submit "検索" %>
+        <%= f.submit "検索" ,class: "btn"%>
       <% end %>
     <ul class='fish-lists'>
 
